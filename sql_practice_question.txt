@@ -1,0 +1,18 @@
+Fitness centre:
+
+Gym_member---> membership(1m,3m,6m,12m)---> payment --->Freeze (7day, 60/y)--->
+
+admin:
+1. add_member
+2. update details (payment)
+on some day x:
+3. click on freeze membership
+freeze rules:
+1. having valid membership
+2. previous total freeze days must be <= (60-7)
+
+once rules are validated,
+start date of Freeze: (rules: must be future date) ()
+No of days:			(>=7 and <=60) (must validate total freeze days inclutind current <=60))
+Submit (current freeze end date < membership end date))
+
