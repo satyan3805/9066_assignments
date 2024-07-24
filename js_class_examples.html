@@ -1,0 +1,273 @@
+<html>
+    <body>
+        <script>
+            //callback hell
+            // setTimeout(() => {
+            //     console.log('1');
+            //     setTimeout(()=>{
+            //         console.log('2');
+            //         setTimeout(()=> {
+            //             console.log('3');
+            //         },1000)
+            //     },1000)
+            // },1000);
+
+            // Promise-- 
+            let a=100;
+            const myP = new Promise((resolve,reject) =>{
+                if(a<=100){
+                    resolve('a is matching');
+                }else{
+                    reject('a is not matching');
+                }
+            });
+            
+            myP.then(value=>{
+                console.log(value);
+            }).then({})
+            .then({})
+            .then({})
+            .catch(error =>{
+                console.log(error);
+            })
+
+            
+
+            //map, filter, reduce functions
+            // const radiusArr = [1, 6, 3, 5, 8];
+
+            function doubleVal(x){
+                return x*2;
+            }
+
+            // console.log(radiusArr.map(function (x){ return (x*2)}));
+            // console.log(radiusArr.map(doubleVal));
+
+            function isEven(x){
+                return x%2 === 0.0;
+            }
+
+            //console.log(radiusArr.filter(isEven));
+
+            //const radiusArr = [1, 6, 3, 5, 8];
+            function sumOfArr(res, curr){
+                res = res + curr;
+                return res;
+            }
+
+            //console.log(radiusArr.reduce(sumOfArr));
+
+            const users = [
+                {fistname:"sat", lastname:"nav", age:40},
+                {fistname:"rat", lastname:"nav", age:30},
+                {fistname:"bat", lastname:"nav", age:40},
+                {fistname:"cat", lastname:"nav", age:50},
+                {fistname:"mat", lastname:"nav", age:30},
+            ];
+
+            function groupByAgeFunc(res,curr){
+                if(res[curr.age]){
+                    res[curr.age] = ++res[curr.age];
+                }else{
+                    res[curr.age]= 1;
+                }
+                return res;
+            }
+            const groupByAge = users.reduce(groupByAgeFunc,{});
+            //console.log(groupByAge);
+
+            // const radiusArr = [5, 78, 43, 6, 92];
+
+            // function area(r) {
+            //     return Math.PI * r * r;
+            // };
+
+            // function doubleVal(x){
+            //     return x*2;
+            // }
+
+            // function square(x){
+            //     return x*x;
+            // }
+
+            // var ansArea=[];
+            // for(var i=0;i<radiusArr.length;i++){
+            //     ansArea[i]=square(radiusArr[i]);
+            // }
+            // console.log(ansArea);
+
+            // calculate = function (arr, func) {
+            //     const result = [];
+            //     for (let i = 0; i < arr.length; i++) {
+            //         result.push(func(arr[i]));
+            //     }
+            //     return result;
+            // };
+            // console.log(calculate(radiusArr,area));
+            // console.log(calculate(radiusArr,doubleVal));
+            // console.log(calculate(radiusArr,square));
+
+            //design patterns
+            //Ajax-- JS framework,API, Async Calls
+            //React, Angular, Vue,
+
+
+
+
+            // var x;
+            // function a(x,y){
+            //     b();
+            //     console.log("TEST");
+            // }
+            //a(c,10);
+            // function(){
+            //     console.log("TEST");
+            // }
+
+            //First Class Functions:
+
+
+            // var b= function c(){
+            //     console.log("TEST");
+            // }
+
+            // console.log(a);
+            // console.log(b);
+
+            //First Class functions, Anonymous Functions
+            //Callback Functions
+            //Asynchronous calls, Promise.
+            //Higher Order Functions
+            //map, filter, reduce functions
+
+
+
+            // for(let i=0;i<10;i++){
+            //     a(function(){
+            //         console.log(i)
+            //     },i*1000);
+            // }
+
+            // function a(){
+            //     var k=0;
+            //     for(var i=0;i<10;i++){
+            //         //console.log(i);
+            //         k++;
+            //     }
+            //     setTimeout(k,1000);
+            // }
+            
+            // 
+
+            
+
+            // var i=0;
+            // function counter(){
+            //     for(let i=0;i<10;i++){
+            //         setTimeout(console.log(i),1000);
+            //     }
+            // }
+            // var x;
+            // function a(){
+            //     setTimeout(function(){
+            //             x=10;
+            //         return x;
+            //     },5000)
+            // };
+            // x=a();
+            // console.log(x);
+
+
+            // setTimeout(function(){
+            //     console.log("TEST");
+            // },5000);
+
+            // setTimeout(console.log("TEST"),5000);
+
+
+            // function a(){
+            //     var x=7;
+            //     function b(){
+            //         //console.log(x);
+            //         return x;
+            //     }
+            //     return b;
+            // }
+            // var c = a();
+            // console.log(c);
+            // console.log(c());
+
+            // var a=11;
+            // var b=20;
+            // //const c;
+            // {
+            //     var a=10;//shadowing the value 11 by 10
+            //     let b=30;// illegal shadowing 
+            //     const c=40;
+            //     console.log(a);//10
+            //     console.log(b);//20
+            //     console.log(c);//40
+            // }
+            // console.log(a);//10
+            // console.log(b);//Error, 20, undefined
+            // console.log(c);//Error, 40, undefined
+            // console.log(a);
+            
+            // console.log(b);
+            // let b;
+            // var a;
+            
+            // {
+            //     console.log(10);
+            // }
+            
+
+            // a();
+            // function a(){
+            //     var i=100;
+            //     b();
+            //     function b(){
+            //         i=200;
+            //         c();
+            //         function c(){
+            //             i=300;
+            //         }
+            //     }
+
+            // }
+            
+            // console.log(i);
+            // var i;
+
+            
+            // var num1=3;
+            // var num2=4;
+            // init();
+            // function init(){
+            //     var num1=5;
+            //     var num2=6;
+            //     console.log(num1);
+            //     console.log(num2);
+            //     num1=10;
+            //     num2=20;
+            //     console.log(num1);
+            //     console.log(num2);
+            // }
+            // console.log(num1);
+            // console.log(num2);
+
+            // function mul(i,j){
+            //     var sum = 0;
+            //     for(var p = 0;p<j;p++){
+            //         var mul = add(sum,i);
+            //     }
+            //     return mul;
+            // }
+
+            // var add = function(i,j){
+            //     var sum = i+j;
+            //     return sum;
+            // }
+        </script>
+    </body>
+</html>
